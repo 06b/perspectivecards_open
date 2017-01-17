@@ -1,0 +1,76 @@
+@import url('fonts.css');
+
+*{box-sizing: border-box;}
+body{font-family: 'Lato'; margin:0; padding: 0; font-size: 16px;}
+body.modal-opened{overflow: hidden;}
+a{text-decoration: none; color: #ec008c;}
+.button{font-family: 'Lato'; width: 206px; border-radius: 5px; text-decoration: none; padding: 24.5px 15px; display: inline-block; text-align: center; border: none; font-size: 16px; cursor: pointer;}
+.button:active, .button:hover, .button:focus{outline: none;}
+.btn-pink{background-color: #ec008c; color: #fff; transition: background .5s ease; }
+.btn-pink:hover{background-color: #bd1958;}
+.btn-social{width: 90px; height: 32px; border-radius: 3px; background-color: #2caae1; display: inline-block; color: #fff; padding: 6px 10px;}
+.btn-social-fb{background-color: #3b579d; margin-left: 10px;}
+.btn-wrapper{margin-top: 33px;}
+.cards-wrapper{padding: 20px; height: 100vh;}
+.cards{position: relative; height: 100%; overflow: hidden;}
+.card{height: 100%; border-radius: 9px; background-color: #efeeed; color: #3f3f3f; position: absolute; top: 0; left: 0; width: 100%; z-index: -10; opacity: 0; transition: all 1s ease-in-out;}
+.card.active{opacity: 1; z-index: 1;}
+.card-inner{height: 100%; display: flex; justify-content: center; flex-direction: column; max-width: 520px; margin: 0 auto; text-align: center; }
+.card.intro .card-inner{max-width: 680px;}	
+
+.card h1{font-size: 64px; margin:0 0 35px;}
+.card h2{font-size: 36px; margin:0 0 26px;}
+.card p{font-size: 21px; margin: 0 0 15px; line-height: 1.33;}
+
+.card-social{position: absolute; top: 20px; right: 20px; z-index: 1000;}
+
+.card-footer{position: absolute; bottom: 33px; padding: 0 40px; width: 100%; z-index: 1000;}
+.card-footer p{font-weight: bold; margin-bottom: 0; font-size: 16px; line-height: normal; z-index: 1000;}
+.credit{color: #ec008c;}
+
+.card-filter{position: absolute; top: 20px; left: 40px; width: 200px; height: 80px; z-index: 1000;}
+
+.pull-left{float: left;}
+.pull-right{float: right;}
+
+.modal-about{position: fixed; top: -50px; left: 0; width: 100%; background: #fff; height: 100%; padding: 20px; font-size: 16px; color: #3f3f3f; opacity: 0; z-index: -1; transition: all .5s ease; overflow-y: auto;}
+.modal-about.active{opacity: 1; z-index: 1500; top: 0;}
+.lm-top{text-align: right;}
+.lm-title{font-size: 26px; color: #3f3f3f; margin-bottom: 30px;}
+.lm-content{-moz-transform: perspective(600px) rotateX(25deg);-webkit-transform: perspective(600px) rotateX(25deg);transform: perspective(600px) rotateX(25deg);-moz-transition: all .5s cubic-bezier(.7,0,.36,.63);-o-transition: all .5s cubic-bezier(.7,0,.36,.63);-webkit-transition: all .5s cubic-bezier(.7,0,.36,.63); transition: all .5s cubic-bezier(.7,0,.36,.63); max-width: 364px; margin: 0 auto;}
+.lm-content p{font-size: 22px; line-height: 1.29; margin-bottom: 20px;}
+.modal-about.active .lm-content{-moz-transform: perspective(600px) rotateX(0deg);-webkit-transform: perspective(600px) rotateX(0deg);transform: perspective(600px) rotateX(0deg);}
+
+.card-tooltip{display: inline-block; width: 20px; height: 20px; background: url(../img/question.png) center center no-repeat transparent; display: inline-block; position: relative; cursor: pointer;}
+.card-tooltip .tooltiptext {visibility: hidden; min-width: 280px; width: auto; background-color: #555; color: #fff; text-align: center; padding: 5px; border-radius: 6px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -140px; opacity: 0; transition: opacity 1s;font-size: 16px;font-weight: normal;}
+.card-tooltip .tooltiptext::after {content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #555 transparent transparent transparent;}
+.card-tooltip:hover .tooltiptext { visibility: visible; opacity: 1;}
+.card-tooltip .tooltiptext a{color: #fff; text-decoration: underline;}
+
+.btn-default{border: none;}
+.dropdown, .btn-default{min-width: 120px;}
+.dropdown .btn-default{color: #09b8d5; text-align: left; position: relative; padding-right: 36px;}
+.dropdown .btn-default .caret{position: absolute; right: 15px; top: 50%; margin-top: -2px;}
+
+.twitter-share-button{display: inline-block; vertical-align: middle;}
+
+@media screen and (max-width: 768px){
+	.cards-wrapper{padding: 0;}
+	.card{border-radius: 0;}
+	.card-inner{padding: 0 20px;}
+	.card-footer{padding: 0 20px;}
+	.card-social{display: none;}
+	.card h1{font-size: 48px}
+
+	.card-tooltip{position: absolute; top: 20px; right: 20px;}
+	.card-tooltip .tooltiptext{position: absolute; bottom: -3px; left: auto; margin-left: 0; right: 140%;}
+	.card-tooltip .tooltiptext::after{top: 8px; left: auto; margin-top: 0; border-width: 5px; border-style: solid; border-color: transparent transparent transparent #555; right: -10px;}
+	.card-filter{left: 20px;}
+
+	.card-footer .pull-left span{display: none;}
+}
+
+@media screen and (max-width: 480px){
+	.card h1{font-size: 38px}
+	.card h2{font-size: 28px}
+}
