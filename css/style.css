@@ -6,8 +6,8 @@ body.modal-opened{overflow: hidden;}
 a{text-decoration: none; color: #ec008c;}
 .button{font-family: 'Lato'; width: 206px; border-radius: 5px; text-decoration: none; padding: 24.5px 15px; display: inline-block; text-align: center; border: none; font-size: 16px; cursor: pointer;}
 .button:active, .button:hover, .button:focus{outline: none;}
-.btn-pink{background-color: #ec008c; color: #fff; transition: background .5s ease; }
-.btn-pink:hover{background-color: #bd1958;}
+.btn-pink{background-color: #2b2b2b; color: #ffffff; transition: background .5s ease; }
+.btn-pink:hover{background-color: #000000;}
 .btn-social{width: 90px; height: 32px; border-radius: 3px; background-color: #2caae1; display: inline-block; color: #fff; padding: 6px 10px;}
 .btn-social-fb{background-color: #3b579d; margin-left: 10px;}
 .btn-wrapper{margin-top: 33px;}
